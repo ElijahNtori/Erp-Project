@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - My Applications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>Applicant Portal</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="applicant-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-jobs.html">
+                        <span>Browse Jobs</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="applicant-applications.html">
+                        <span>My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>My Applications</h1>
+                    <p>Track your job application status</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="interview">Interview Scheduled</button>
+                <button class="filter-btn" data-filter="accepted">Accepted</button>
+                <button class="filter-btn" data-filter="rejected">Rejected</button>
+            </div>
+            
+            <div id="applicationsList" class="applications-list">
+                <p class="no-applications">No applications yet</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="applicant-applications.js"></script>
+</body>
+</html>

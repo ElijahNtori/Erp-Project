@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Browse Jobs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>Applicant Portal</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="applicant-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="applicant-jobs.html">
+                        <span>Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-applications.html">
+                        <span>My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>Browse Jobs</h1>
+                    <p>Search and apply for available positions</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search jobs by title, company, or keywords...">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Jobs</button>
+                <button class="filter-btn" data-filter="engineering">Engineering</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="sales">Sales</button>
+                <button class="filter-btn" data-filter="hr">Human Resources</button>
+            </div>
+            
+            <div id="jobsList" class="jobs-list">
+                <p class="no-jobs">No jobs available at the moment</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="applicant-jobs.js"></script>
+</body>
+</html>

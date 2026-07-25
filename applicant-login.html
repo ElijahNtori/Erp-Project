@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Applicant Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card applicant-login">
+            <div class="login-header">
+                <h1>Applicant Login</h1>
+                <p>Sign in to search and apply for jobs</p>
+            </div>
+            
+            <form id="applicantLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Don't have an account? <a href="applicant-signup.html">Sign up as Applicant</a></p>
+                <p><a href="index.html">← Back to Role Selection</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="applicant-login.js"></script>
+</body>
+</html>

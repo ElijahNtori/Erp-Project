@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - HR Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="hr-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar hr-sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>HR Administration</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="hr-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-jobs.html">
+                        <span>Manage Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-applications.html">
+                        <span>Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-interviews.html">
+                        <span>Interviews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>HR Dashboard</h1>
+                    <p>Post jobs and manage applications</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3>Total Applications</h3>
+                        <p class="stat-number" id="totalApps">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-info">
+                        <h3>Pending Review</h3>
+                        <p class="stat-number" id="pendingApps">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <h3>Interviews Scheduled</h3>
+                        <p class="stat-number" id="interviewsScheduled">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-info">
+                        <h3>Active Jobs</h3>
+                        <p class="stat-number" id="activeJobs">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <a href="hr-post-job.html" class="action-btn primary">
+                        <span>➕</span>
+                        <span>Post New Job</span>
+                    </a>
+                    <a href="hr-applications.html" class="action-btn secondary">
+                        <span>📂</span>
+                        <span>Review Applications</span>
+                    </a>
+                    <a href="hr-interviews.html" class="action-btn secondary">
+                        <span>📅</span>
+                        <span>Schedule Interviews</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="posted-jobs">
+                <h2>Your Posted Jobs</h2>
+                <div id="jobsList" class="jobs-list">
+                    <p class="no-jobs">No jobs posted yet</p>
+                </div>
+            </div>
+            
+            <div class="recent-applications">
+                <h2>Recent Applications</h2>
+                <div id="applicationsList" class="applications-list">
+                    <p class="no-applications">No recent applications</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="hr-dashboard.js"></script>
+</body>
+</html>

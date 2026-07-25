@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+}
+
+.landing-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                url('Human Resources Seminars - Best Practices for Human Resources Executives.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.landing-content {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.logo-section {
+    margin-bottom: 50px;
+}
+
+.logo-section h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.logo-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.role-selection h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.role-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.role-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.applicant-card:hover {
+    border: 3px solid #667eea;
+}
+
+.hr-card:hover {
+    border: 3px solid #f5576c;
+}
+
+.role-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.role-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.role-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.role-features span {
+    font-size: 14px;
+    color: #999;
+    padding: 8px 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.role-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.applicant-card .role-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.applicant-card .role-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.hr-card .role-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.hr-card .role-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+    .logo-section h1 {
+        font-size: 36px;
+    }
+    
+    .role-selection h2 {
+        font-size: 24px;
+    }
+    
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .role-card {
+        padding: 30px;
+    }
+}

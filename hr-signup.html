@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - HR Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body class="hr-login-page">
+    <div class="login-container">
+        <div class="login-card hr-login">
+            <div class="login-header">
+                <h1>HR Administrator Sign Up</h1>
+                <p>Create your account to post jobs and manage applications</p>
+            </div>
+            
+            <form id="hrSignupForm" class="login-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Recruitment">Recruitment</option>
+                        <option value="Talent Acquisition">Talent Acquisition</option>
+                        <option value="People Operations">People Operations</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I agree to the HR Admin Terms and Conditions</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Already have an account? <a href="hr-login.html">Login as HR Admin</a></p>
+                <p><a href="index.html">← Back to Role Selection</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="hr-signup.js"></script>
+</body>
+</html>

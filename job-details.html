@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Job Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>Applicant Portal</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="applicant-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-jobs.html">
+                        <span>Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-applications.html">
+                        <span>My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <a href="applicant-jobs.html" class="back-link">← Back to Jobs</a>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="job-details-container">
+                <div id="jobContent" class="job-content">
+                    <p class="loading">Loading job details...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="job-details.js"></script>
+</body>
+</html>

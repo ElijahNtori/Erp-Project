@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Job Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>Applicant Portal</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="applicant-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-jobs.html">
+                        <span>Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-applications.html">
+                        <span>My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>Job Application</h1>
+                    <p>Submit your application for the selected position</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="job-form-container">
+                <div id="jobInfoBanner" class="job-info-banner"></div>
+                
+                <form id="applicationForm" class="job-form">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Professional Information</h3>
+                        <div class="form-group">
+                            <label for="experience">Years of Experience *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select Experience</option>
+                                <option value="0-1">0-1 years</option>
+                                <option value="1-3">1-3 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="5-10">5-10 years</option>
+                                <option value="10+">10+ years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currentRole">Current Role</label>
+                            <input type="text" id="currentRole" name="currentRole" placeholder="Enter your current role">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="skills">Skills *</label>
+                            <textarea id="skills" name="skills" rows="3" required placeholder="List your key skills (comma separated)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+                        <div class="form-group">
+                            <label for="coverLetter">Cover Letter</label>
+                            <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Tell us why you're interested in this position"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="expectedSalary">Expected Salary</label>
+                            <input type="text" id="expectedSalary" name="expectedSalary" placeholder="e.g., $60,000 - $80,000">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="login-btn">Submit Application</button>
+                        <a href="job-details.html" class="cancel-btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="application-form.js"></script>
+</body>
+</html>

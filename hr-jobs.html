@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Manage Jobs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="hr-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar hr-sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>HR Administration</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="hr-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="hr-jobs.html">
+                        <span>Manage Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-applications.html">
+                        <span>Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-interviews.html">
+                        <span>Interviews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>Manage Jobs</h1>
+                    <p>Post, edit, and manage job listings</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Jobs</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="closed">Closed</button>
+            </div>
+            
+            <div class="action-bar">
+                <a href="hr-post-job.html" class="action-btn primary">
+                    <span>➕</span>
+                    <span>Post New Job</span>
+                </a>
+            </div>
+            
+            <div id="jobsList" class="jobs-list">
+                <p class="no-jobs">No jobs posted yet</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="hr-jobs.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Interview Scheduling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="hr-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar hr-sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>HR Administration</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="hr-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-jobs.html">
+                        <span>Manage Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-applications.html">
+                        <span>Applications</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="hr-interviews.html">
+                        <span>Interviews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>Interview Scheduling</h1>
+                    <p>Schedule and manage candidate interviews</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Interviews</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            
+            <div id="interviewsList" class="interviews-list">
+                <p class="no-interviews">No interviews scheduled yet</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="hr-interviews.js"></script>
+</body>
+</html>

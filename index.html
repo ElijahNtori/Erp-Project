@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landing-content">
+            <div class="logo-section">
+                <h1>HR Recruitment System</h1>
+                <p>Streamline your hiring process</p>
+            </div>
+            
+            <div class="role-selection">
+                <h2>Choose Your Role</h2>
+                <div class="role-cards">
+                    <div class="role-card applicant-card" onclick="window.location.href='applicant-login.html'">
+                        <div class="role-icon">👤</div>
+                        <h3>Applicant</h3>
+                        <p>Search jobs and submit applications</p>
+                        <div class="role-features">
+                            <span>🔍 Search Jobs</span>
+                            <span>📝 Apply Online</span>
+                            <span>📊 Track Applications</span>
+                        </div>
+                        <button class="role-btn">Login as Applicant</button>
+                    </div>
+                    
+                    <div class="role-card hr-card" onclick="window.location.href='hr-login.html'">
+                        <div class="role-icon">👔</div>
+                        <h3>HR Administrator</h3>
+                        <p>Post jobs and manage applications</p>
+                        <div class="role-features">
+                            <span>➕ Post Jobs</span>
+                            <span>📂 Review Applications</span>
+                            <span>📅 Schedule Interviews</span>
+                        </div>
+                        <button class="role-btn">Login as HR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="landing-footer">
+        <div class="footer-content">
+            <p>Developed by: Elijah Ntori, Coker Addae, Ofori Benjamin, Iddrisu Mohammed, Adu Yeboah</p>
+        </div>
+    </footer>
+</body>
+</html>

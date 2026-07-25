@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Post Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="hr-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar hr-sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>HR Administration</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="hr-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="hr-jobs.html">
+                        <span>Manage Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-applications.html">
+                        <span>Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hr-interviews.html">
+                        <span>Interviews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1 id="pageTitle">Post New Job</h1>
+                    <p>Create a new job listing</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="job-form-container">
+                <form id="jobForm" class="job-form">
+                    <div class="form-section">
+                        <h3>Job Information</h3>
+                        <div class="form-group">
+                            <label for="title">Job Title *</label>
+                            <input type="text" id="title" name="title" required placeholder="Enter job title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company *</label>
+                            <input type="text" id="company" name="company" required placeholder="Enter company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="department">Department *</label>
+                            <select id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Human Resources">Human Resources</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Operations">Operations</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="type">Job Type *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Select Job Type</option>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Part-time">Part-time</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Internship">Internship</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location *</label>
+                            <input type="text" id="location" name="location" required placeholder="Enter location">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Job Details</h3>
+                        <div class="form-group">
+                            <label for="description">Job Description *</label>
+                            <textarea id="description" name="description" rows="5" required placeholder="Enter job description"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="requirements">Requirements *</label>
+                            <textarea id="requirements" name="requirements" rows="4" required placeholder="Enter job requirements"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="salary">Salary Range</label>
+                            <input type="text" id="salary" name="salary" placeholder="e.g., $50,000 - $70,000">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="login-btn" id="submitBtn">Post Job</button>
+                        <a href="hr-jobs.html" class="cancel-btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="hr-post-job.js"></script>
+</body>
+</html>

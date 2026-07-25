@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Recruitment System - Applicant Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HR Recruitment</h2>
+                <p>Applicant Portal</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="applicant-dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-jobs.html">
+                        <span>Browse Jobs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="applicant-applications.html">
+                        <span>My Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" onclick="logout()">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-section">
+                    <h1>Welcome Back!</h1>
+                    <p>Search and apply for jobs</p>
+                </div>
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+            </header>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3>Total Applications</h3>
+                        <p class="stat-number" id="totalApps">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-info">
+                        <h3>Pending</h3>
+                        <p class="stat-number" id="pendingApps">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>Interview Scheduled</h3>
+                        <p class="stat-number" id="interviewApps">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🎉</div>
+                    <div class="stat-info">
+                        <h3>Accepted</h3>
+                        <p class="stat-number" id="acceptedApps">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <a href="applicant-jobs.html" class="action-btn primary">
+                        <span>🔍</span>
+                        <span>Browse Jobs</span>
+                    </a>
+                    <a href="applicant-applications.html" class="action-btn secondary">
+                        <span>📂</span>
+                        <span>View Applications</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="available-jobs">
+                <h2>Available Jobs</h2>
+                <div id="jobsList" class="jobs-list">
+                    <p class="no-jobs">No jobs available at the moment</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="applicant-dashboard.js"></script>
+</body>
+</html>
