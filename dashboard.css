@@ -5,7 +5,7 @@
 
 .sidebar {
     width: 280px;
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, #2563eb 0%, #14b8a6 100%);
     padding: 30px 0;
     position: fixed;
     height: 100vh;
@@ -160,7 +160,7 @@
 }
 
 .action-btn.primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     color: white;
 }
 
@@ -235,7 +235,7 @@
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: #667eea;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -270,14 +270,14 @@
 }
 
 .filter-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: #2563eb;
+    color: #2563eb;
 }
 
 .filter-btn.active {
-    background: #667eea;
+    background: #2563eb;
     color: white;
-    border-color: #667eea;
+    border-color: #2563eb;
 }
 
 .applications-list {
@@ -414,12 +414,12 @@
 }
 
 .edit-btn {
-    background: #667eea;
+    background: #2563eb;
     color: white;
 }
 
 .edit-btn:hover {
-    background: #5568d3;
+    background: #1d4ed8;
 }
 
 .toggle-btn {
@@ -516,13 +516,13 @@
 
 .search-bar input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .search-btn {
     padding: 14px 20px;
-    background: #667eea;
+    background: #2563eb;
     color: white;
     border: none;
     border-radius: 10px;
@@ -532,7 +532,7 @@
 }
 
 .search-btn:hover {
-    background: #5568d3;
+    background: #1d4ed8;
 }
 
 .salary-badge {
@@ -552,7 +552,7 @@
 
 .apply-hint {
     font-size: 13px;
-    color: #667eea;
+    color: #2563eb;
     font-weight: 500;
 }
 
@@ -568,7 +568,7 @@
 }
 
 .back-link {
-    color: #667eea;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -668,13 +668,13 @@
 }
 
 .error a {
-    color: #667eea;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 600;
 }
 
 .job-info-banner {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #14b8a6 100%);
     color: white;
     padding: 20px 25px;
     border-radius: 10px;

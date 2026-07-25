@@ -1,5 +1,5 @@
 .hr-sidebar {
-    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(180deg, #14b8a6 0%, #0d9488 100%);
 }
 
 .posted-jobs {
@@ -50,7 +50,7 @@
     display: block;
     text-align: center;
     margin-top: 15px;
-    color: #f5576c;
+    color: #14b8a6;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
