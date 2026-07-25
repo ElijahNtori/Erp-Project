@@ -1,7 +1,6 @@
 .login-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
-                url('46091596181777057.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +12,7 @@
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    max-width: 450px;
+    max-width: 600px;
     width: 100%;
 }
 
@@ -26,8 +25,7 @@
 }
 
 body.hr-login-page .login-container {
-    background: linear-gradient(135deg, rgba(240, 147, 251, 0.85) 0%, rgba(245, 87, 108, 0.85) 100%),
-                url('AIIMS Raipur recruitment 2019_ Apply online for 200 nursing officer posts.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.85) 0%, rgba(245, 87, 108, 0.85) 100%);
 }
 
 .login-header {
